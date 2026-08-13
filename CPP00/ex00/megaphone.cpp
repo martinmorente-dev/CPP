@@ -23,7 +23,6 @@ int	main(int argc, char *argv[])
 	{
 		for(int j = 0; argv[i][j] != '\0'; j++)
 			std::cout << (char)std::toupper(argv[i][j]);
-		
 	}
 	std::cout << "\n";
 	return (0);
