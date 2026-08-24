@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mmorente <mmorente@student.42.fr>          +#+  +:+       +#+         #
+#    By: mmorente <mmorente@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/08 12:06:42 by mmorente          #+#    #+#              #
-#    Updated: 2026/08/13 14:14:27 by mmorente         ###   ########.fr        #
+#    Updated: 2026/08/24 15:15:19 by mmorente         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = phone
+NAME = phonebook
 
 OBJ_DIR = ../obj
 
