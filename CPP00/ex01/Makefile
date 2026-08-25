@@ -6,11 +6,11 @@
 #    By: mmorente <mmorente@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/08 12:06:42 by mmorente          #+#    #+#              #
-#    Updated: 2026/08/24 15:15:19 by mmorente         ###   ########.fr        #
+#    Updated: 2026/08/25 14:46:59 by mmorente         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = phonebook
+NAME = awesome_phonebook
 
 OBJ_DIR = ../obj
 

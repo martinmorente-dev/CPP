@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 10:38:35 by mmorente          #+#    #+#             */
-/*   Updated: 2026/08/25 10:39:14 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/08/25 14:48:07 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 #define RED "\033[31m"
 #define RESET "\033[0m"
+#define GREEN   "\033[32m"
 
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 14:08:52 by mmorente          #+#    #+#             */
-/*   Updated: 2026/08/25 10:40:08 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/08/25 15:21:27 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ void	addContacts(PhoneBook &phonebook)
 
 	std::cout << "Introduce the  darkest secret" << std::endl;
 	std::getline(std::cin, darkest_secret);
-
+	if (std::cin.eof())
+		return ;
 	created_at = time(NULL);
-	
 	phonebook.addContact(first_name, last_name, nickname, phone_number, darkest_secret, created_at);
 }
 
@@ -51,9 +51,12 @@ int	main()
 
 	while (!finish_program)
 	{
-		std::cout << "Welcome to my phonebook please introduce the next options (ADD, SEARCH, EXIT)\n" << std::endl;
-		std::getline(std::cin, option);
-
+		std::cout << GREEN <<  "Welcome to my phonebook please introduce the next options (ADD, SEARCH, EXIT)\n" << RESET <<std::endl;
+		if (!std::getline(std::cin, option))
+		{
+			std::cout << std::endl;
+			option = "EXIT";
+		}
 		if (option == "ADD")
 			addContacts(phonebook);
 		else if (option == "SEARCH")

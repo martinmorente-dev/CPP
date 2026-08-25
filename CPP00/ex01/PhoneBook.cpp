@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 11:30:55 by mmorente          #+#    #+#             */
-/*   Updated: 2026/08/25 10:37:20 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/08/25 15:17:26 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	PhoneBook::addContact(std::string first_name, std::string last_name, std::s
 	if (_Count < MAX_CONTACTS)
 	{
 		_Contacts[_Count] = new_contact;
-		std::cout << "Contact added\n" << std::endl;
+		std::cout << GREEN << "Contact added\n" << RESET <<std::endl;
 		_Count++;
 	}
 	else
@@ -87,7 +87,8 @@ void	PhoneBook::_SearchSpecificContact() const
 		std::cout << "Introduce the index of the contact 0 - 7 or introduce exit to finalice the search option\n" << std::endl;
 	
 		std::getline(std::cin, input);
-
+		if (std::cin.eof())
+			input = "exit";
 		std::istringstream iss(input);
 
 		if (iss >> index && (iss >> std::ws).eof() && index >= 0 && index < _Count)
