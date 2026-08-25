@@ -6,11 +6,12 @@
 /*   By: mmorente <mmorente@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 14:08:52 by mmorente          #+#    #+#             */
-/*   Updated: 2026/08/24 15:37:33 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/08/25 10:40:08 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+#include "common.hpp"
 
 void	addContacts(PhoneBook &phonebook)
 {
@@ -63,6 +64,6 @@ int	main()
 			std::cout << "Thanks for using my program\n";
 		}
 		else
-			std::cout << "Invalid option\n" << std::endl;
+			std::cout << RED "Invalid option\n" << RESET << std::endl;
 	}
 }

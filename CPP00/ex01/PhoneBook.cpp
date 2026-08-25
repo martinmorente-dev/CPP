@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 11:30:55 by mmorente          #+#    #+#             */
-/*   Updated: 2026/08/24 15:37:14 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/08/25 10:37:20 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	PhoneBook::addContact(std::string first_name, std::string last_name, std::s
 	if (_Count < MAX_CONTACTS)
 	{
 		_Contacts[_Count] = new_contact;
+		std::cout << "Contact added\n" << std::endl;
 		_Count++;
 	}
 	else
@@ -47,7 +48,7 @@ void	PhoneBook::searchContact()
 		_SearchSpecificContact();
 	}
 	else
-		std::cout << "You need to introduce at least 1 contact before you search\n" << std::endl;
+		std::cout << RED << "You need to introduce at least 1 contact before you search\n" << RESET << std::endl;
 }
 
 // Helper functions
@@ -67,10 +68,10 @@ int	PhoneBook::_SearchOldestContact(Contact contacts[MAX_CONTACTS])
 void	PhoneBook::_ShowAllContacts() const
 {
 
-	_PrintTable();
+	_PrintTable(false);
 
 	for(int i = 0; i < _Count; i++)
-		_PrintContact(i);
+		_PrintContact(i, false);
 	std::cout << std::endl;
 }
 
@@ -91,13 +92,13 @@ void	PhoneBook::_SearchSpecificContact() const
 
 		if (iss >> index && (iss >> std::ws).eof() && index >= 0 && index < _Count)
 		{
-			_PrintTable();
-			_PrintContact(index);
+			_PrintTable(true);
+			_PrintContact(index, true);
 			std::cout << "\n";
 		}
 		else if (input != "exit")
 		{
-			std::cout << "Invalid input (0 - 7) or there is no contact in that position\n" << std::endl;
+			std::cout << RED << "Invalid input (0 - 7) or there is no contact in that position\n" << RESET << std::endl;
 		}
 	}
 }
@@ -109,20 +110,32 @@ std::string	PhoneBook::_TruncateField(const std::string &field, size_t width) co
 	return (field);
 }
 
-void	PhoneBook::_PrintTable() const
+void	PhoneBook::_PrintTable(bool detailed) const
 {
 	std::cout << std::right << "|" << std::setw(10) << "Index" << "|"
 								   << std::setw(10) << "First Name" << "|"
 								   << std::setw(10) << "Last Name" << "|"
-								   << std::setw(10) << "Nickname" << "|" << std::endl;
+								   << std::setw(10) << "Nickname" << "|";
+	if (detailed)
+	{
+		std::cout << std::setw(10) << "Number" << "|" 
+				  << std::setw(10) << "Secret" << "|";
+	}
+	std::cout << std::endl;
 }
 
-void	PhoneBook::_PrintContact(int to_print) const
+void	PhoneBook::_PrintContact(int to_print, bool detailed) const
 {
 	std::cout << std::right << "|"
 				  << std::setw(10) << to_print << "|"
 				  << std::setw(10) << _TruncateField(_Contacts[to_print].getFirstName(), 10) << "|"
 				  << std::setw(10) << _TruncateField(_Contacts[to_print].getLastName(), 10) << "|"
-				  << std::setw(10) << _TruncateField(_Contacts[to_print].getNickname(), 10) << "|" << std::endl;
+				  << std::setw(10) << _TruncateField(_Contacts[to_print].getNickname(), 10) << "|";
+	if (detailed)
+	{
+		std::cout  << std::setw(10) << _TruncateField(_Contacts[to_print].getPhoneNumber(), 10) << "|" 
+				   << std::setw(10) << _TruncateField(_Contacts[to_print].getDarkestSecret(), 10) << "|";
+	}
+	std::cout << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 10:48:57 by mmorente          #+#    #+#             */
-/*   Updated: 2026/08/24 15:37:45 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/08/25 10:37:01 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,13 +73,13 @@ bool	Contact::ValidateData(std::string first_name, std::string last_name, std::s
 	if (!_IsNotSpaceOnly(first_name) || !_IsNotSpaceOnly(last_name) || !_IsNotSpaceOnly(nickname)
 		|| !_IsNotSpaceOnly(phone_number) || !_IsNotSpaceOnly(darkest_secret))
 	{
-		std::cout << "You need to introduce all the data\n" << std::endl;
+		std::cout << RED <<"You need to introduce all the data\n" << RESET <<  std::endl;
 		return (false);
 	}
 	if (!_IsNotSpecial(first_name) || !_IsNotSpecial(last_name) || !_IsNotSpecial(nickname)
 		|| !_IsNotSpecial(phone_number) || !_IsNotSpecial(darkest_secret))
 	{
-		std::cout << "The data is invalid\n" << std::endl;
+		std::cout << RED <<"The data is invalid\n"<< RESET << std::endl;
 		return (false);
 	}
 	return (true);
