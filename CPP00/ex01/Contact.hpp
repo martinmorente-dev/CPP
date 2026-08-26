@@ -6,13 +6,12 @@
 /*   By: mmorente <mmorente@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 10:48:49 by mmorente          #+#    #+#             */
-/*   Updated: 2026/08/25 10:39:28 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/08/26 11:35:24 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
+#pragma once
 
 #include <iostream>
 #include <ctime>
@@ -51,4 +50,3 @@ public:
 
 };
 
-#endif
