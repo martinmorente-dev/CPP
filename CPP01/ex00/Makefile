@@ -6,11 +6,11 @@
 #    By: mmorente <mmorente@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/08 12:06:42 by mmorente          #+#    #+#              #
-#    Updated: 2026/08/26 10:30:35 by mmorente         ###   ########.fr        #
+#    Updated: 2026/08/27 10:55:06 by mmorente         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = BraiiiiiiinnnzzzZ
 
 OBJ_DIR = ../obj
 

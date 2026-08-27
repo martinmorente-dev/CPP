@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 10:31:01 by mmorente          #+#    #+#             */
-/*   Updated: 2026/08/26 10:40:38 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/08/27 10:48:28 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,10 @@ class Zombie
 
 		void	announce(void);
 };
+
+// Helper functions
+Zombie* newZombie(std::string name);
+void	randomChump(std::string name);
+
 
 #endif
