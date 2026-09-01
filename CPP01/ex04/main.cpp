@@ -6,17 +6,16 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 10:41:19 by mmorente          #+#    #+#             */
-/*   Updated: 2026/08/31 12:01:33 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/09/01 11:50:16 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "sed.hpp"
+#include "File.hpp"
 
 int main (int argc, char *argv[])
 {
-  std::string file_data;
-
   if (!validations(argv, argc))
     return (1);
+  File(argv[1], argv[2], argv[3]).newSed();
   return (0);
 }
