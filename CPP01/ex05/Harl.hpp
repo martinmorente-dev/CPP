@@ -1,0 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/02 12:15:15 by mmorente          #+#    #+#             */
+/*   Updated: 2026/09/02 14:08:52 by mmorente         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef HARL_HPP
+# define HARL_HPP
+
+# include <iostream>
+
+
+class Harl
+{
+  private:
+    void _debug(void);
+    void _info(void);
+    void _warning(void);
+    void _error(void);
+  
+  public:
+    void complain(std::string level);
+};
+
+typedef void (Harl::*t_harl)(void);
+
+#endif
