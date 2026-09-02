@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 10:43:25 by mmorente          #+#    #+#             */
-/*   Updated: 2026/09/01 11:54:45 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/09/02 11:50:36 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ File::File(std::string file_name, std::string to_find, std::string replace_to)
 
 File::~File(){}
 
-void File::newSed()
+bool File::newSed()
 {
   std::string content = _readFile();
   std::string new_content;
@@ -31,21 +31,22 @@ void File::newSed()
   if (content.empty())
   {
     std::cout << RED << "The file is empty" << RESET << std::endl;
-    return ;
+    return (false);
   }
   new_content = _replaceAll(content);
   if (content == new_content)
   {
     std::cout << RED << "There was no coincidence in the file" << RESET << std::endl;
-    return ;
+    return (false);
   }
   std::ofstream new_file(new_file_name.c_str());
   if (!new_file.is_open())
   {
     std::cout << RED << "Unexpected error: The file " << this->_file_name + ".replace" << "was not created" << RESET << std::endl;
-    return ;
+    return (false);
   }
   new_file << new_content;
+  return (true);
 }
 
 

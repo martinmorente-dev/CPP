@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 10:34:21 by mmorente          #+#    #+#             */
-/*   Updated: 2026/09/01 11:54:33 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/09/02 11:50:52 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ class File
     File(std::string file_name, std::string to_find, std::string replace_to);
     ~File();
 
-    void  newSed(void);
-    
+    bool  newSed(void);
 };
 
 #endif
