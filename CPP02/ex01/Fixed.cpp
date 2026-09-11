@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 12:41:04 by mmorente          #+#    #+#             */
-/*   Updated: 2026/09/10 13:21:04 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/09/11 11:23:53 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,13 @@ Fixed::Fixed(const Fixed &fixed) {
   _raw = fixed._raw;
 }
 
-Fixed::Fixed(const int intNumber) { _raw = intNumber * (1 << _fractionalBits); }
+Fixed::Fixed(const int intNumber) { 
+  std::cout << "Int constructor called" << std::endl;
+  _raw = intNumber * (1 << _fractionalBits);
+}
 
 Fixed::Fixed(const float floatNumber) {
+  std::cout << "Float constructor called" << std::endl;
   _raw = roundf(floatNumber * (1 << _fractionalBits));
 }
 
