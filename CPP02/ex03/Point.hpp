@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 13:26:37 by mmorente          #+#    #+#             */
-/*   Updated: 2026/09/14 14:35:08 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/09/14 16:30:06 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ public:
   Fixed const getX(void);
   Fixed const getY(void);
 };
+
+  bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif
