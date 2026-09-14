@@ -25,7 +25,7 @@ Fixed::Fixed(const Fixed &fixed) {
   _raw = fixed._raw;
 }
 
-Fixed::Fixed(const int intNumber) { 
+Fixed::Fixed(const int intNumber) {
   std::cout << "Int constructor called" << std::endl;
   _raw = intNumber * (1 << _fractionalBits);
 }
@@ -77,7 +77,7 @@ bool Fixed::operator>(const Fixed &num2) const {
   return (this->_raw > num2._raw);
 }
 
-bool Fixed::operator>=(const Fixed &num2) const{
+bool Fixed::operator>=(const Fixed &num2) const {
   return (this->_raw >= num2._raw);
 }
 
@@ -140,29 +140,25 @@ Fixed Fixed::operator--(int) {
   return (cpy);
 }
 
-Fixed &Fixed::min(Fixed &a, Fixed &b)
-{
+Fixed &Fixed::min(Fixed &a, Fixed &b) {
   if (a < b)
     return (a);
   return (b);
 }
 
-const Fixed &Fixed::min(const Fixed &a, const Fixed &b)
-{
+const Fixed &Fixed::min(const Fixed &a, const Fixed &b) {
   if (a < b)
     return (a);
   return (b);
 }
 
-Fixed &Fixed::max(Fixed &a, Fixed &b)
-{
+Fixed &Fixed::max(Fixed &a, Fixed &b) {
   if (a > b)
     return (a);
   return (b);
 }
 
-const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
-{
+const Fixed &Fixed::max(const Fixed &a, const Fixed &b) {
   if (a > b)
     return (a);
   return (b);
