@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 12:11:12 by mmorente          #+#    #+#             */
-/*   Updated: 2026/09/15 13:31:17 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/09/15 14:28:16 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
   class Claptrap {
 
-    private:
+    protected:
       std::string _name;
       int         _hit_points;
       int         _energy_points;
@@ -28,7 +28,7 @@
       Claptrap(std::string name);
       Claptrap(const Claptrap &claptrap);
       Claptrap &operator=(const Claptrap &other);
-      ~Claptrap(void);
+      virtual ~Claptrap(void);
 
       void  attack(const std::string &target);
       void  takeDamage(unsigned int amount);
