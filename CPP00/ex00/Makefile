@@ -6,11 +6,11 @@
 #    By: mmorente <mmorente@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/08 12:06:42 by mmorente          #+#    #+#              #
-#    Updated: 2026/08/13 14:14:27 by mmorente         ###   ########.fr        #
+#    Updated: 2026/09/02 12:13:23 by mmorente         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = HARL2.0
 
 OBJ_DIR = ../obj
 

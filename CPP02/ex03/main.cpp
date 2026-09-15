@@ -25,12 +25,12 @@ void runTest(std::string const &name, Point const &a, Point const &b,
 
 int main(void)
 {
- Point a(0, 0);
+ Point a(0.2f, 0);
  Point b(6, 0);
  Point c(3, 6);
 
-  runTest("Punto dentro", a, b, c, Point(3, 2), true);
-  runTest("Punto fuera (lejos)",   a, b, c, Point(10, 10), false);
+  runTest("Punto dentro", a, b, c, Point(3.74f, 2), true);
+  runTest("Punto fuera (lejos)",   a, b, c, Point(10.5f, 10), false);
   runTest("Punto fuera (cerca)",   a, b, c, Point(5, 5),   false);
   runTest("Punto = vertice a",     a, b, c, Point(0, 0),   false);
   runTest("Punto sobre arista a-b",a, b, c, Point(3, 0),   false);

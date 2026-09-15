@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 10:59:26 by mmorente          #+#    #+#             */
-/*   Updated: 2026/08/31 12:28:07 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/09/03 12:10:17 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static bool check_file_exist(char *argv)
   }
   else
   {
-    std::cout << RED << "The file not exist" << RESET << std::endl;
+    std::cout << RED << "The file not exist or it does not have the necessary permissions to read it" << RESET << std::endl;
     return (false);
   }
 }
