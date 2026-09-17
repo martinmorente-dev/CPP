@@ -6,11 +6,11 @@
 #    By: mmorente <mmorente@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/08 12:06:42 by mmorente          #+#    #+#              #
-#    Updated: 2026/09/15 12:09:56 by mmorente         ###   ########.fr        #
+#    Updated: 2026/09/17 12:56:10 by mmorente         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Aaand..Open
+NAME = serena_my_love
 
 OBJ_DIR = ./obj
 

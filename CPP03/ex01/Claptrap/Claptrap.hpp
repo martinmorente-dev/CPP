@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 12:11:12 by mmorente          #+#    #+#             */
-/*   Updated: 2026/09/15 14:28:16 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/09/17 12:47:25 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@
       void  attack(const std::string &target);
       void  takeDamage(unsigned int amount);
       void  beRepaired(unsigned int amount);
-
       std::string getName(void);
   };
 
