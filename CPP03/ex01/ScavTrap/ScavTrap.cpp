@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 12:34:28 by mmorente          #+#    #+#             */
-/*   Updated: 2026/09/17 12:55:07 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/09/25 14:32:19 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,34 @@ void ScavTrap::attack(const std::string &target)
   }
   std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage." << std::endl;
   _energy_points--;
+}
+
+void	ScavTrap::takeDamage(unsigned int amount)
+{
+ if (_hit_points <= 0)
+  {
+    std::cout << "ScavTrap " << _name
+              << " can't recibe damage: no hit points left" << std::endl;
+    return ;
+  }
+
+  _hit_points -= amount;
+  std::cout << "ScavTrap " << _name << " recieved "
+            << amount << " damage " << _hit_points << " left" << std::endl; 
+
+}
+
+void ScavTrap::beRepaired(unsigned int amount)
+{
+  if (_energy_points <= 0 || _hit_points <= 0)
+  {
+    std::cout << "ScavTrap " << _name
+              << " can't repair itself: no energy or hit points left" << std::endl;
+    return ;
+  }
+
+  _hit_points += amount;
+  std::cout << "ScavTrap " << _name << " repair " << amount << " points!!" << std::endl;
 }
 
 void ScavTrap::guardGate(void)

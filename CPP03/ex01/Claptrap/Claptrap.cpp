@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 12:23:51 by mmorente          #+#    #+#             */
-/*   Updated: 2026/09/15 13:35:31 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/09/25 14:28:26 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void Claptrap::takeDamage(unsigned int amount)
 
   _hit_points -= amount;
   std::cout << "Claptrap " << _name << " recieved "
-            << _attack_damage << " damage " << _hit_points << " left" << std::endl; 
+            << amount << " damage " << _hit_points << " left" << std::endl; 
 }
 
 void Claptrap::beRepaired(unsigned int amount)

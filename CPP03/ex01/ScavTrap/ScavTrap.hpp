@@ -6,14 +6,14 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 14:26:03 by mmorente          #+#    #+#             */
-/*   Updated: 2026/09/17 12:44:26 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/09/25 14:27:02 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
 
-#include "../main.hpp"
+#include "../Claptrap/Claptrap.hpp"
 
 class ScavTrap : public Claptrap
 {
@@ -25,6 +25,8 @@ class ScavTrap : public Claptrap
     ~ScavTrap(void);
 
     void  attack(const std::string &target);
+	void  takeDamage(unsigned int amount);
+	void  beRepaired(unsigned int amount);
     void  guardGate(void);
 };
 

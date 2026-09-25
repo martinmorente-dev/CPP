@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 13:18:20 by mmorente          #+#    #+#             */
-/*   Updated: 2026/09/17 12:50:04 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/09/25 14:33:05 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int main(void)
   Claptrap c1 = Claptrap("Luis");
 
   sc1.attack(sc2.getName());
+  sc2.takeDamage(20);
   sc2.guardGate();
   sc1.guardGate();
   c1.beRepaired(20);

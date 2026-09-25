@@ -1,0 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/15 13:18:20 by mmorente          #+#    #+#             */
+/*   Updated: 2026/09/25 14:43:17 by mmorente         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "main.hpp"
+
+int main(void)
+{
+  ScavTrap sc1 = ScavTrap("paco");
+  ScavTrap sc2 = ScavTrap("pepe");
+  Claptrap c1 = Claptrap("Luis");
+  FragTrap fc1 = FragTrap("Er Bicho");
+
+  sc1.attack(sc2.getName());
+  sc2.takeDamage(20);
+  sc2.guardGate();
+  sc1.guardGate();
+  fc1.attack(c1.getName());
+  c1.takeDamage(30);
+  fc1.highFiveGuys();
+  c1.beRepaired(20);
+
+  return (0);
+}
