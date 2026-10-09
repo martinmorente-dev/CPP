@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 15:02:05 by mmorente          #+#    #+#             */
-/*   Updated: 2026/10/09 16:50:03 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/10/09 17:07:08 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,9 @@ Cat::~Cat(void)
 void Cat::makeSound(void) const
 {
   std::cout << "MEOW MEOW" << std::endl;
+}
+
+Brain *Cat::getBrain()
+{
+  return (_brain);
 }

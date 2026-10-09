@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 14:50:17 by mmorente          #+#    #+#             */
-/*   Updated: 2026/10/09 16:48:11 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/10/09 17:06:55 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,9 @@ Dog::~Dog(void)
 void Dog::makeSound() const
 {
   std::cout << "BARK BARK" << std::endl;
+}
+
+Brain *Dog::getBrain()
+{
+  return (_brain);
 }

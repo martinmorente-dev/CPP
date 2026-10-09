@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 14:22:55 by mmorente          #+#    #+#             */
-/*   Updated: 2026/10/09 16:46:25 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/10/09 17:06:38 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Dog : public Animal
     ~Dog(void);
 
     virtual void makeSound(void) const;
+    Brain *getBrain(void);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 14:59:42 by mmorente          #+#    #+#             */
-/*   Updated: 2026/10/09 16:48:55 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/10/09 17:07:01 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@
       ~Cat(void);
 
       virtual void makeSound(void) const;
+      Brain *getBrain(void);
   };
 
 #endif

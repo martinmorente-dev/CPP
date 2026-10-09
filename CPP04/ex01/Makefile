@@ -6,11 +6,11 @@
 #    By: mmorente <mmorente@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/08 12:06:42 by mmorente          #+#    #+#              #
-#    Updated: 2026/10/02 14:14:33 by mmorente         ###   ########.fr        #
+#    Updated: 2026/10/09 17:08:09 by mmorente         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Polmorphism
+NAME = Set_World_Fire
 
 OBJ_DIR = ./obj
 
