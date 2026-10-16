@@ -6,19 +6,19 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 14:50:17 by mmorente          #+#    #+#             */
-/*   Updated: 2026/10/09 17:06:55 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/10/16 17:54:12 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog(void): Animal()
+Dog::Dog(void): AAnimal()
 {
   _type = "Dog";
   _brain = new Brain();
 }
 
-Dog::Dog(const Dog &other) : Animal(other)
+Dog::Dog(const Dog &other) : AAnimal(other)
 {
   std::cout << "Dog copy constructor called" << std::endl;
   this->_brain = new Brain(*other._brain);
@@ -29,7 +29,7 @@ Dog &Dog::operator=(const Dog &other)
   std::cout << "Dog copy assigment operator called" << std::endl;
   if (this != &other)
   {
-    Animal::operator=(other);
+    AAnimal::operator=(other);
     delete this->_brain;
     this->_brain = new Brain(*other._brain);
   }

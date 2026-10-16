@@ -6,7 +6,7 @@
 /*   By: mmorente <mmorente@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 15:05:36 by mmorente          #+#    #+#             */
-/*   Updated: 2026/10/16 17:45:39 by mmorente         ###   ########.fr       */
+/*   Updated: 2026/10/16 17:52:46 by mmorente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int main()
     // ---------- Polimorfismo sigue funcionando ----------
     std::cout << "=== Polimorfismo (sigue funcionando) ===" << std::endl;
     {
-        const Animal* dog = new Dog();
-        const Animal* cat = new Cat();
+        const AAnimal* dog = new Dog();
+        const AAnimal* cat = new Cat();
 
         std::cout << dog->getType() << " " << std::endl;
         std::cout << cat->getType() << " " << std::endl;
@@ -41,7 +41,7 @@ int main()
         std::cout << "\n===== ARRAY DE ANIMALS =====" << std::endl;
 
         const int size = 6;
-        Animal* animals[size];
+        AAnimal* animals[size];
 
         for (int i = 0; i < size / 2; i++)
         {
